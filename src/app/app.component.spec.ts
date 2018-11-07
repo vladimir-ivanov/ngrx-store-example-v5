@@ -1,6 +1,5 @@
 import {TestBed, async} from '@angular/core/testing';
 import {RouterTestingModule} from '@angular/router/testing';
-import 'jest';
 import {AppComponent} from './app.component';
 import {UserModule} from './user/user.module';
 import {UserComponent} from './user/user.component';
