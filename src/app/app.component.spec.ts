@@ -1,6 +1,9 @@
-import { TestBed, async } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app.component';
+import {TestBed, async} from '@angular/core/testing';
+import {RouterTestingModule} from '@angular/router/testing';
+import 'jest';
+import {AppComponent} from './app.component';
+import {UserModule} from './user/user.module';
+import {UserComponent} from './user/user.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -9,7 +12,7 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent, UserComponent
       ],
     }).compileComponents();
   }));
@@ -17,19 +20,12 @@ describe('AppComponent', () => {
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
+    expect(app).toMatchSnapshot();
   });
 
   it(`should have as title 'ngrx-store-example-v5'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('ngrx-store-example-v5');
-  });
-
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to ngrx-store-example-v5!');
+    const app = fixture.debugElement.nativeElement;
+    expect(app).toMatchSnapshot();
   });
 });
