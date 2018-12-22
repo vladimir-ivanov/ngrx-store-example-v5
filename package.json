@@ -1,6 +1,22 @@
 {
   "name": "ngrx-store-example-v5",
-  "version": "0.0.0",
+  "description": "any",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "dist/ngrx-store-example-v5/index.js",
+  "author": "vladimir-ivanov@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vladimir-ivanov/ngrx-store-example-v5.git"
+  },
+  "files": [
+    "dist/ngrx-store-example-v5/**"
+  ],
+  "exclude": [
+    "dist/ngrx-store-example-v5/node_modules",
+    "node_modules",
+    "runtime"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

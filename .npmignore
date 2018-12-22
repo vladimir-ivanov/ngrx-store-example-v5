@@ -1,0 +1,11 @@
+# Node generated files
+.idea
+*.iml
+npm-debug.log
+# OS generated files
+Thumbs.db
+.DS_Store
+# Ignored files
+src
+node_modules
+ci

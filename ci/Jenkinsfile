@@ -19,6 +19,7 @@ pipeline {
         echo 'Deploying....'
         sh 'npm run build'
         sh 'zip -r ngrx-store-example-v5.zip dist/ngrx-store-example-v5/'
+        sh 'npm publish'
       }
     }
   }
